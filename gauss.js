@@ -1,10 +1,11 @@
-function solution(A) {
-    var length = A.length;
-    var sum = ((length + 1) /2) * (length + 2);
-
-    var sumMinusMissing = 0;
-    for (i = 0; i < length; i++) { 
-        sumMinusMissing += A[i];
+function gauss(A) {
+    
+    let len = A.length + 1
+    let sum = ((1 + len) * len) / 2
+    let sum2 = 0
+    for(let i = 0; i < A.length; i++){
+         sum2 += A[i]
     }
-    return sum - sumMinusMissing;
+    
+    return sum - sum2
 }
